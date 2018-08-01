@@ -35,4 +35,4 @@ videodir=/home/pi/typer/videos/
 #И отправляем это все в видеопроигрыватель omxplayer
 omxplayer -b --no-keys $videodir$videofile
 #После проигрывания запускаем скрипт заново
-./while.sh
+./typer.sh
