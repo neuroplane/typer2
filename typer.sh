@@ -6,7 +6,7 @@ clear
 echo -e "\n\n"
 x=0
 #Задаем количество необходимых успешных попыток ввода:
-z=10
+z=15
 while [ $x -lt $z ]
         do
                 word=$(shuf -n 1 words.txt)
@@ -32,9 +32,6 @@ echo $passed >> seconds.t
 videofile=$(shuf -n 1 videos.txt)
 #Задаем директорию, содержащую видео файлы
 videodir=/home/pi/typer/videos/
-#treelines = $(tree -id | wc -l)
-#dirlist = $(sed "2,$treelines)
-echo $dirlist
 #И отправляем это все в видеопроигрыватель omxplayer
 omxplayer -b --no-keys $videodir$videofile
 #После проигрывания запускаем скрипт заново
